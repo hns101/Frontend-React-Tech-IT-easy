@@ -1,6 +1,8 @@
 import './App.css';
 import { inventory } from "./constants/inventory.js";
 import SoldTVs from "./helpers/SoldTVs.js";
+import TVsInStock from "./helpers/TVsInStock.js";
+import TVsToSell from "./helpers/TVsToSell.js";
 
 function App() {
   return (<>
@@ -14,11 +16,11 @@ function App() {
             <h3>Aantal verkocht producten</h3>
           </div>
           <div className="card" id="bg-1">
-            <h1 className="counter">73</h1>
+            <h1 className="counter">{TVsInStock(inventory)}</h1>
             <h3>Aantal ingekochte producten</h3>
           </div>
           <div className="card" id="bg-3">
-            <h1 className="counter">40</h1>
+            <h1 className="counter">{TVsToSell(inventory)}</h1>
             <h3>Aantal te verkopen producten</h3>
           </div>
         </div>
