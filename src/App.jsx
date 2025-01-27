@@ -1,4 +1,6 @@
 import './App.css';
+import { inventory } from "./constants/inventory.js";
+import SoldTVs from "./helpers/SoldTVs.js";
 
 function App() {
   return (<>
@@ -7,15 +9,15 @@ function App() {
       <div id="outer-container-view">
         <h2>Verkoopoverzicht</h2>
         <div id="inner-container-card">
-          <div className="card" id="card-sold">
-            <h1 className="counter">33</h1>
+          <div className="card" id="bg-2">
+            <h1 className="counter">{SoldTVs(inventory)}</h1>
             <h3>Aantal verkocht producten</h3>
           </div>
-          <div className="card" id="card-purchase">
+          <div className="card" id="bg-1">
             <h1 className="counter">73</h1>
             <h3>Aantal ingekochte producten</h3>
           </div>
-          <div className="card" id="card-selling">
+          <div className="card" id="bg-3">
             <h1 className="counter">40</h1>
             <h3>Aantal te verkopen producten</h3>
           </div>

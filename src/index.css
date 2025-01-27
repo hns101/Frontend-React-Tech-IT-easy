@@ -7,10 +7,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   /*Color Design*/
-  --mainColor: #0e417a;
+  --mainColor: #293b91;
   --secColor: #d09137;
   --white: #ffffff;
-  --light-gray: #c7c7c7;
+  --light-gray: #8d816d;
   --dark-gray: #343a40;
   --darkLetter: #151515;
 }

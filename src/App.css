@@ -71,3 +71,65 @@ header{
 
 
 
+/* ------------------------------- AnimatedBG -------------------------------- */
+
+
+#bg-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 200% 200%;
+    background-image: linear-gradient(-45deg, var(--mainColor) 0%, var(--mainColor) 25%, var(--mainColor) 51%, #ff357f 100%);
+    -webkit-animation: AnimateBG 10s ease infinite;
+    animation: AnimateBG 100s ease infinite;
+}
+
+
+
+#bg-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 200% 200%;
+    background-image: linear-gradient(35deg, var(--light-gray) 0%, var(--light-gray) 25%, var(--light-gray) 51%, #9fce13 100%);
+    -webkit-animation: AnimateBG 10s ease infinite;
+    animation: AnimateBG 100s ease infinite;
+}
+
+
+
+#bg-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 200% 200%;
+    background-image: linear-gradient(145deg, var(--secColor) 0%, var(--secColor) 25%, var(--secColor) 51%, #3538ff 100%);
+    -webkit-animation: AnimateBG 10s ease infinite;
+    animation: AnimateBG 100s ease infinite;
+}
+
+
+@-webkit-keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
