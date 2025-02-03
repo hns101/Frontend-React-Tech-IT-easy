@@ -12,7 +12,8 @@ export default function TvCardLoader(props) {
             <TvCard className="card-tv" id="all-product-card"
                     src={tvImage(props.input[i])} title={tvName(props.input[i])}
                     price={tvPrice(props.input[i])} sizes={tvSizes(props.input[i])}
-                    input={props.input[i]} />
+                    input={props.input[i]} key={i}
+            />
         )
     }
 
