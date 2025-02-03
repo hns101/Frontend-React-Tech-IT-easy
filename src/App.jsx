@@ -11,6 +11,7 @@ import tvImage from "./helpers/tvImage.js";
 import AmountCard from "./components/AmountCard";
 import TvCard from "./components/TvCard";
 import TvCardLoader from "./components/TvCardLoader.jsx";
+import {sortMostSoldTv, sortCheapestTv, sortForSportTv} from "./helpers/logSortingTv.js";
 
 function App() { return (<>
     <header><h1>Tech It Easy Dashboard</h1></header>
@@ -29,15 +30,16 @@ function App() { return (<>
                     src={tvImage(bestSellingTv)} title={tvName(bestSellingTv)}
                     price={tvPrice(bestSellingTv)} sizes={tvSizes(bestSellingTv)}
                     input={bestSellingTv}/>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h2>Alle tv's</h2>
-            <TvCardLoader props={inventory} />
+            <TvCardLoader input={inventory} />
         </div>
     </main>
     <footer>
     <div className="footer-container">
-        <button type="button" onClick={() => console.log("Meest verkocht eerst!")}>Meest verkocht eerst</button>
-        <button type="button" onClick={() => console.log("Goedkoopste eerst!")}>Goedkoopste eerst</button>
-        <button type="button" onClick={() => console.log("Meest geschikt voor sport eerst!")}>Meest geschikt voor sport eerst</button>
+        <button type="button" onClick={sortMostSoldTv}>Meest verkocht eerst</button>
+        <button type="button" onClick={sortCheapestTv}>Goedkoopste eerst</button>
+        <button type="button" onClick={sortForSportTv}>Meest geschikt voor sport eerst</button>
       </div>
     </footer>
   </>)
