@@ -22,5 +22,9 @@ const bigScreenTvs = inventory.filter(tv => tv.availableSizes.find(size => size 
 console.log(bigScreenTvs);
 
 //1f
-const haveAmbilight = inventory.filter(tv => tv.options.find(tv => tv.name === "ambiLight" && tv. applicable === true));
-console.log(haveAmbilight);
+const haveAmbiLight = inventory.filter(tv => tv.options.find(tv => tv.name === "ambiLight" && tv. applicable === true));
+console.log(haveAmbiLight);
+
+//2a
+const tvBrands = inventory.map(inventory => inventory.brand);
+console.log(tvBrands);

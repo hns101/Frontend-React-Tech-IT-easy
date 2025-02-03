@@ -10,6 +10,7 @@ import tvSizes from "./helpers/tvSizes.js";
 import tvImage from "./helpers/tvImage.js";
 import AmountCard from "./components/AmountCard";
 import TvCard from "./components/TvCard";
+import TvCardLoader from "./components/TvCardLoader.jsx";
 
 function App() { return (<>
     <header><h1>Tech It Easy Dashboard</h1></header>
@@ -22,16 +23,18 @@ function App() { return (<>
           <AmountCard title="Aantal te verkopen producten" value={tvsToSell(inventory)} id="bg-3" />
         </div>
       </section>
-      <div id="top-product-container">
-      <h2>Best verkochte tv</h2>
-        <TvCard className="card-tv" id="top-product-card"
-                src={tvImage(bestSellingTv)} title={tvName(bestSellingTv)}
-                price={tvPrice(bestSellingTv)} sizes={tvSizes(bestSellingTv)}
-                input={bestSellingTv} />
-      </div>
+        <div id="top-product-container">
+            <h2>Best verkochte tv</h2>
+            <TvCard className="card-tv" id="top-product-card"
+                    src={tvImage(bestSellingTv)} title={tvName(bestSellingTv)}
+                    price={tvPrice(bestSellingTv)} sizes={tvSizes(bestSellingTv)}
+                    input={bestSellingTv}/>
+            <h2>Alle tv's</h2>
+            <TvCardLoader props={inventory} />
+        </div>
     </main>
     <footer>
-      <div className="footer-container">
+    <div className="footer-container">
         <button type="button" onClick={() => console.log("Meest verkocht eerst!")}>Meest verkocht eerst</button>
         <button type="button" onClick={() => console.log("Goedkoopste eerst!")}>Goedkoopste eerst</button>
         <button type="button" onClick={() => console.log("Meest geschikt voor sport eerst!")}>Meest geschikt voor sport eerst</button>
