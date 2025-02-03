@@ -11,8 +11,7 @@ import tvImage from "./helpers/tvImage.js";
 import check from "./assets/check.png";
 import uncheck from "./assets/minus.png";
 // import TVCheckLine from "./components/TVCheckLine.jsx";
-
-
+import AmountCard from "./components/AmountCard";
 
 function App() { return (<>
     <header><h1>Tech It Easy Dashboard</h1></header>
@@ -20,18 +19,9 @@ function App() { return (<>
       <div id="outer-container-view">
         <h2>Verkoopoverzicht</h2>
         <div id="inner-container-card">
-          <div className="card" id="bg-2">
-            <h1 className="counter">{soldTvs(inventory)}</h1>
-            <h3>Aantal verkocht producten</h3>
-          </div>
-          <div className="card" id="bg-1">
-            <h1 className="counter">{tvsInStock(inventory)}</h1>
-            <h3>Aantal ingekochte producten</h3>
-          </div>
-          <div className="card" id="bg-3">
-            <h1 className="counter">{tvsToSell(inventory)}</h1>
-            <h3>Aantal te verkopen producten</h3>
-          </div>
+          <AmountCard title="Aantal verkocht producten" value={soldTvs(inventory)} id="bg-2" />
+          <AmountCard title="Aantal ingekochte producten" value={tvsInStock(inventory)} id="bg-1" />
+          <AmountCard title="Aantal te verkopen producten" value={tvsToSell(inventory)} id="bg-3" />
         </div>
       </div>
       <div id="top-product-container">
