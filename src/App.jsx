@@ -1,9 +1,48 @@
-import './App.css';
+import './styles/App.css';
+import { inventory } from "./constants/inventory.js";
+import { bestSellingTv } from "./constants/inventory.js";
+import soldTvs from "./helpers/soldTvs.js";
+import tvsInStock from "./helpers/tvsInStock.js";
+import tvsToSell from "./helpers/tvsToSell.js";
+import tvName from "./helpers/tvName.js";
+import tvPrice from "./helpers/tvPrice.js";
+import tvSizes from "./helpers/tvSizes.js";
+import tvImage from "./helpers/tvImage.js";
+import AmountCard from "./components/AmountCard";
+import TvCard from "./components/TvCard";
+import TvCardLoader from "./components/TvCardLoader.jsx";
+import {sortMostSoldTv, sortCheapestTv, sortForSportTv} from "./helpers/logSortingTv.js";
 
-function App() {
-  return (
-    <h1>Begin hier met met maken van de applicatie!</h1>
-  )
+function App() { return (<>
+    <header><h1>Tech It Easy Dashboard</h1></header>
+    <main>
+      <section id="outer-container-view">
+        <h2>Verkoopoverzicht</h2>
+        <div id="inner-container-card">
+          <AmountCard title="Aantal verkocht producten" value={soldTvs(inventory)} id="bg-2" />
+          <AmountCard title="Aantal ingekochte producten" value={tvsInStock(inventory)} id="bg-1" />
+          <AmountCard title="Aantal te verkopen producten" value={tvsToSell(inventory)} id="bg-3" />
+        </div>
+      </section>
+        <div id="top-product-container">
+            <h2>Best verkochte tv</h2>
+            <TvCard className="card-tv" id="top-product-card"
+                    src={tvImage(bestSellingTv)} title={tvName(bestSellingTv)}
+                    price={tvPrice(bestSellingTv)} sizes={tvSizes(bestSellingTv)}
+                    input={bestSellingTv}/>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            <h2>Alle tv's</h2>
+            <TvCardLoader input={inventory} />
+        </div>
+    </main>
+    <footer>
+    <div className="footer-container">
+        <button type="button" onClick={sortMostSoldTv}>Meest verkocht eerst</button>
+        <button type="button" onClick={sortCheapestTv}>Goedkoopste eerst</button>
+        <button type="button" onClick={sortForSportTv}>Meest geschikt voor sport eerst</button>
+      </div>
+    </footer>
+  </>)
 }
 
 export default App

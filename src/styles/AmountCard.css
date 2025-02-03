@@ -1,0 +1,78 @@
+
+.counter {
+    font-weight: bold;
+}
+.counter-text{
+    font-size: 1.2rem;
+}
+.card-amount {
+    flex-direction:column ;
+    min-width: 200px;
+    padding: 20px 50px 50px 50px;
+    background-color: var(--mainColor);
+    align-items: center;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*moving backgrounds*/
+
+#bg-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:  120%  120%;
+    background-image: linear-gradient(45deg, var(--mainColor) 0%, var(--mainColor) 25%, var(--mainColor) 51%, #35d0ff 100%);
+    -webkit-animation: AnimateBG 1s ease infinite;
+    animation: AnimateBG 10s ease infinite;
+}
+
+
+
+#bg-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:  120%  120%;
+    background-image: linear-gradient(270deg, var(--light-gray) 0%, var(--light-gray) 25%, var(--light-gray) 51%, #9fce13 100%);
+    -webkit-animation: AnimateBG 1s ease infinite;
+    animation: AnimateBG 10s ease infinite;
+}
+
+
+
+#bg-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 120% 120%;
+    background-image: linear-gradient(199deg, var(--secColor) 0%, var(--secColor) 25%, var(--secColor) 51%, #dcaf13 100%);
+    -webkit-animation: AnimateBG 1s ease infinite;
+    animation: AnimateBG 10s ease infinite;
+}
+
+
+@-webkit-keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
