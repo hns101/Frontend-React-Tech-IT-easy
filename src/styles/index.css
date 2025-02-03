@@ -8,6 +8,7 @@
   -webkit-text-size-adjust: 100%;
   /*Color Design*/
   --mainColor: rgba(41, 59, 145, 0.9);
+  --orange: rgb(248, 148, 15);
   --secColor: #a62a2a;
   --white: #ffffff;
   --light-gray: #828554;

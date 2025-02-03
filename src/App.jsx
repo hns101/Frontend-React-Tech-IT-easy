@@ -8,8 +8,6 @@ import tvName from "./helpers/tvName.js";
 import tvPrice from "./helpers/tvPrice.js";
 import tvSizes from "./helpers/tvSizes.js";
 import tvImage from "./helpers/tvImage.js";
-import check from "./assets/check.png";
-import uncheck from "./assets/minus.png";
 import AmountCard from "./components/AmountCard";
 import TvCard from "./components/TvCard";
 

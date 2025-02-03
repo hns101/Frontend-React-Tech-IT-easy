@@ -5,7 +5,7 @@
 .counter-text{
     font-size: 1.2rem;
 }
-.card {
+.card-amount {
     flex-direction:column ;
     min-width: 200px;
     padding: 20px 50px 50px 50px;
