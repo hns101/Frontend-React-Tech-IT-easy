@@ -24,7 +24,7 @@ function App() { return (<>
       </section>
       <div id="top-product-container">
       <h2>Best verkochte tv</h2>
-        <TvCard className="card" id="top-product-card"
+        <TvCard className="card-tv" id="top-product-card"
                 src={tvImage(bestSellingTv)} title={tvName(bestSellingTv)}
                 price={tvPrice(bestSellingTv)} sizes={tvSizes(bestSellingTv)}
                 input={bestSellingTv} />
