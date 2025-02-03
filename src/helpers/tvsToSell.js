@@ -1,4 +1,4 @@
-function TVsToSell(inventory) {
+function tvsToSell(inventory) {
     let amountTVsInStock = 0;
     let amountSoldTVs = 0;
     for (let i = 0; i < inventory.length; i++) {
@@ -8,4 +8,4 @@ function TVsToSell(inventory) {
     return amountTVsInStock - amountSoldTVs;
 }
 
-export default TVsToSell;
+export default tvsToSell;

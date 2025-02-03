@@ -1,4 +1,4 @@
-function SoldTVs(inventory) {
+function soldTvs(inventory) {
     let amountSoldTVs = 0;
     for (let i = 0; i < inventory.length; i++) {
         amountSoldTVs = inventory[i].sold + amountSoldTVs;
@@ -6,4 +6,5 @@ function SoldTVs(inventory) {
     return amountSoldTVs;
 }
 
-export default SoldTVs;
+export default soldTvs;
+
